@@ -21,7 +21,8 @@
 
     &__text {
         position: relative;
-        display: block;
+        display: flex;
+        align-items: center;
         padding-left: 12px;
         margin-left: 10px;
         font-size: 18px;
