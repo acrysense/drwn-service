@@ -1,0 +1,163 @@
+@import "config"; // Always at the beginning
+@import "header";
+
+// main
+.main {
+    position: relative;
+    overflow-x: hidden;
+    min-height: 100vh;
+    min-height: calc(100vh - var(--height));
+    &__wrapper {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 20px 0;
+        max-width: 900px;
+        min-height: 100vh;
+        min-height: calc(100vh - var(--height));
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translate(100%, -50%);
+            display: block;
+            width: 660px;
+            height: 704px;
+            background-image: url(../img/dist/main-img.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+
+        @media screen and (max-width: 1023px) {
+            &::after {
+                position: static;
+                transform: none;
+                margin: 20px auto 0;
+            }
+        }
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            &::after {
+                width: 522px;
+                height: 557px;
+            }
+        }
+        @media screen and (max-width: 767px) {
+            text-align: center;
+            &::after {
+                width: 290px;
+                height: 310px;
+            }
+        }
+    }
+    &__advantages {
+        margin-top: 50px;
+
+        @media screen and (max-width: 767px) {
+            margin-top: 30px;
+        }
+    }
+    &__btn {
+        margin-top: 50px;
+
+        @media screen and (max-width: 767px) {
+            margin-top: 30px;
+            width: 100%;
+        }
+    }
+}
+
+// advantages
+.advantages {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 720px;
+    &__item {
+        display: flex;
+        align-items: center;
+        padding: 15px;
+        background: $gray-color;
+        border-radius: 7px;
+        &--checkbox {
+            .advantages__description {
+                padding-left: 45px;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    transform: translateY(-50%);
+                    display: block;
+                    width: 30px;
+                    height: 30px;
+                    background-color: $accent-color;
+                    background-image: url(../img/dist/sprite.svg#icon-checkbox);
+                    background-repeat: no-repeat;
+                    background-size: 18px;
+                    background-position: center center;
+                    border-radius: 50%;
+                }
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            width: 48%;
+            &:nth-child(2n) {
+                margin-left: 4%;
+            }
+            &:nth-child(n + 3) {
+                margin-top: 30px;
+            }
+        }
+        @media screen and (max-width: 767px) {
+            width: 100%;
+            &--checkbox {
+                .advantages__description {
+                    padding-left: 25px;
+                    &::before {
+                        width: 15px;
+                        height: 15px;
+                        background-size: 8px;
+                    }
+                }
+            }
+        }
+    }
+    &__item + &__item {
+        @media screen and (max-width: 767px) {
+            margin-top: 15px;
+        }
+    }
+    &__description {
+        position: relative;
+        padding-left: 18px;
+        font-size: 22px;
+        font-weight: normal;
+        text-align: left;
+        b, strong {
+            display: block;
+            font-weight: 500;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 3px;
+            height: 100%;
+            background: $linear-gradient;
+        }
+
+        @media screen and (max-width: 767px) {
+            padding-left: 12px;
+            font-size: 15px;
+            &::before {
+                width: 2px;
+            }
+        }
+    }
+}
