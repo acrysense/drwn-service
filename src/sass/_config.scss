@@ -194,3 +194,34 @@ svg line {
         font-size: 15px;
     }
 }
+
+.select {
+    display: block;
+    margin: 0;
+    padding: 8px;
+    font-size: 16px;
+    font-weight: normal;
+    background: $white-color;
+    border: 1px solid $primary-color;
+    cursor: pointer;
+    appearance: none;
+    &:focus {
+        outline: none;
+    }
+}
+
+.input {
+    display: block;
+    margin: 0;
+    padding: 8px;
+    font-size: 16px;
+    font-weight: normal;
+    background: $white-color;
+    border: 1px solid $primary-color;
+    appearance: none;
+    transition: all 0.4s;
+    &:focus {
+        outline: none;
+        border: 1px solid $accent-color;
+    }
+}

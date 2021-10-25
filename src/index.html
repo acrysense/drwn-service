@@ -23,7 +23,7 @@
                         <stop offset="1" stop-color="#F7B733"/>
                         </linearGradient>
                         </defs>
-                    </svg>                        
+                    </svg>
                     <span class="logotype__text">Сектора & Портфели</span>
                 </a>
                 <a href="#" class="header__link link">
@@ -57,11 +57,37 @@
                         <p class="advantages__description"><b>Наглядное резюме</b> по всем акциям за 5 минут</p>
                     </div>
                 </div>
-                <a href="#" class="main__btn btn">Хочу бесплатный доступ</a>
+                <a href="#" class="main__btn btn modal-btn" data-id="free-access">Хочу бесплатный доступ</a>
             </div>
         </div>
     </section>
     <!-- End of main -->
+    <!-- Modal -->
+    <div class="modal" id="free-access">
+        <div class="modal__top">
+            <h3 class="modal__title">Добавьте тикет</h3>
+            <a href="#" class="modal__close" aria-label="Закрыть"></a>
+        </div>
+        <div class="modal__content">
+            <div class="modal__group">
+                <span class="modal__help">Введите значение</span>
+                <input type="text" class="modal__input input" placeholder="Введите значение">
+            </div>
+            <div class="modal__group">
+                <span class="modal__help">Выберите тикер</span>
+                <select class="modal__select select">
+                    <option value="0">Apple</option>
+                    <option value="1">Bing</option>
+                </select>
+            </div>
+            <div class="modal__buttons">
+                <a href="#" class="modal__btn modal__btn--close">Закрыть</a>
+                <a href="#" class="modal__btn modal__btn--save btn">Сохранить</a>
+            </div>
+        </div>
+    </div>
+    <div class="overlay"></div>
+    <!-- End of modal -->
     <!-- Scripts -->
     <script src="js/vendor.min.js"></script>
     <script src="js/app.min.js"></script>
